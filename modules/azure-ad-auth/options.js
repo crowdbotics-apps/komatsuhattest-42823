@@ -67,13 +67,12 @@ const styles = StyleSheet.create({
     borderRadius: 5
   }
 });
+
 export default {
   title: "Azure Ad Auth",
   copy: "Routes available",
   styles: styles,
   azureTenant: "shahraizali10yahoo.onmicrosoft.com",
-  azureClientId: "37515f77-xxxx-xxxx-xxxx-dcf8496d948c",
-  // see Readme for more info
+  azureClientId: "37515f77-xxxx-xxxx-xxxx-dcf8496d948c", // see Readme for more info
   azureRedirectUri: "com.shahrtestdemodev67931://com.shahrtestdemodev67931/android/callback" // see Readme for more info
-
 };
