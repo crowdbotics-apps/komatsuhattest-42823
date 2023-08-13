@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { View, TextInput, Button, StyleSheet, SafeAreaView, Image } from "react-native";
+import { View, TextInput, Button, StyleSheet, SafeAreaView, Image, Text, TouchableOpacity } from "react-native";
 
 const LoginScreen = () => {
+  const navigation = useNavigation();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,6 +24,11 @@ const LoginScreen = () => {
         <TextInput style={styles.input} placeholder="Username" value={username} onChangeText={setUsername} />
         <TextInput style={styles.input} placeholder="Password" secureTextEntry value={password} onChangeText={setPassword} />
         <Button title="Login" onPress={handleLogin} style={styles.loginButton} />
+        <TouchableOpacity onPress={() => {
+        navigation.navigate("ScreenAI3");
+      }}>
+          <Text style={styles.forgotPassword}>Forgot Password?</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>;
 };
@@ -55,6 +62,10 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     marginTop: 10
+  },
+  forgotPassword: {
+    marginTop: 10,
+    color: "blue"
   }
 });
 export default LoginScreen;
