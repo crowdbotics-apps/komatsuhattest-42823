@@ -20,8 +20,8 @@ const KomatsuLandingScreen = ({
         <ImageBackground style={styles.BAuRCnCjw} source={require("./assets/bg.png")} resizeMode="cover"></ImageBackground>
 
         <Pressable onPress={() => {
-        navigation.navigate("Azure Ad Auth");
-      }} style={styles.VngTxYqJa}>
+        navigation.navigate("ScreenAI3");
+      }} style={styles.VngTxYqJa} accessibilityElementsHidden={true}>
           <View style={styles.VngTxYqJ}>
             <Pressable onPress={() => {
             navigation.navigate("ScreenAI2");
